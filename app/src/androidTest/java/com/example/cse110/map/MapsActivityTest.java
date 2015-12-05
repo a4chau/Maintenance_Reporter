@@ -92,7 +92,6 @@ public class MapsActivityTest extends ActivityInstrumentationTestCase2<MapsActiv
         solo.enterText((EditText) solo.getView(R.id.roomNumber), "101");
         solo.enterText((EditText) solo.getView(R.id.problem), "projector doesn't work");
         solo.clickOnButton("Report");
-        solo.sleep(5000);
         solo.waitForActivity(MapsActivity.class, 2000);
         solo.assertCurrentActivity("Current Activity", MapsActivity.class);
         /* when i am back on main activity page and I click on the pin where the building I reported

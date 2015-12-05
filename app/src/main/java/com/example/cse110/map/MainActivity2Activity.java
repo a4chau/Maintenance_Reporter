@@ -246,10 +246,10 @@ public class MainActivity2Activity extends AppCompatActivity{
                             newReport.put("reportDescription", problemString);
                             newReport.put("Building", buildingString);
                             newReport.put("RoomNumber", numberString);
-                            newReport.put("count",0);
+                            newReport.put("count", 0);
 
                             //Check if a photo was taken
-                            if(photograph.getDrawable() != null) {
+                            if (photograph.getDrawable() != null) {
 
                                 //Convert photo to usable format and put in newReport
                                 Bitmap photoBitmap = ((BitmapDrawable) photograph.getDrawable()).getBitmap();
@@ -263,6 +263,8 @@ public class MainActivity2Activity extends AppCompatActivity{
                         }
                     }
                 });
+                try{
+                Thread.sleep(1500);}catch(InterruptedException ex){Thread.currentThread().interrupt();}
                 finish();
             }
         });
