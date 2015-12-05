@@ -50,14 +50,18 @@ public class MapsActivityTest extends ActivityInstrumentationTestCase2<MapsActiv
      Given I just opened up the app on my phone
      when I’m on the main activity page with the map
      then I should see pins in the locations of all buildings that have valid reports on them
-     and when I click add report button
+     and when I click "New Report" button
+     then I am directed to the report page
+     and when I fill in all the fields but something is invalid and click report
+     then the report won't go through and I will remain on that page
+     and When I click the back button
+     then I go back to Maps activity page
+     and when I click "New Report" button
      then I am directed to the report page
      and when I fill in all the fields with valid input and click report
-     then current page closes to main activity
-     and when I am back on main activity page
-     then map is refreshed with my report added to existing pin or new pin if necessary
-     and when I click on a pin
-     then I should see an information label that shows all rooms for that building that have valid             reports on them
+     then current page closes to maps activity
+     when I am back on main activity page and I click on the pin where the building I reported is
+     then I will see an information label that shows all rooms for that building that have valid reports on them
      and when I click on the information label
      then a new activity should come up with all the detailed reports for those rooms**/
 
